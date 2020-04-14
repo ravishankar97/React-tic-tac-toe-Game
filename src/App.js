@@ -124,11 +124,7 @@ const calculateWinner=(square_values)=>{
 	let return_data={status:null,result:{player:"",data:[]}}
 
 
-	let tempSq = square_values.filter(item => item === null);
-	if (tempSq.length === 0) {
-		return_data = { status: "draw", result: {player:"",data:[]}}
-		return return_data
-	}
+	
 
 	for(let i=0;i< winLines.length;i++){
 		const [a,b,c] = winLines[i]
@@ -137,6 +133,12 @@ const calculateWinner=(square_values)=>{
 			return return_data;
 		}
 
+	}
+
+	let tempSq = square_values.filter(item => item === null);
+	if (tempSq.length === 0) {
+		return_data = { status: "draw", result: {player:"",data:[]}}
+		return return_data
 	}
 	return return_data
 }

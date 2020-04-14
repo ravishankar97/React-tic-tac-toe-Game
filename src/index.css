@@ -1,13 +1,70 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 40px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 40px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.square:focus {
+  outline: none;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.winningSquares {
+  color: #000;
+  background: rgb(142, 252, 99);
+}
+
+.reset-btn{
+  padding:5px;
+  color:white;
+  
+}
+
+.game {
+  display: block;
+  float: left;
+  margin: 15px;
+  
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.reset-btn{
+  
+  display: inline-block;
+ 
+}
+
+.toggle-btn{
+  display: inline-block;
+  margin-left: 15px;
+  text-align: center;
+}
+
+li{
+  padding: 4px;
+}
+
+.active {
+  font-weight: 600;
+}
+
+.inactive {
+  font-weight: normal;
 }
